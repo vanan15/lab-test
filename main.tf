@@ -25,7 +25,7 @@ module "vpc" {
 module "ec2_instance" {
   source = "terraform-aws-modules/ec2-instance/aws"
 
-  for_each = toset(["one", "two"])
+  for_each = toset(["one", "two", "three"])
 
   name = "instance-${each.key}"
 
